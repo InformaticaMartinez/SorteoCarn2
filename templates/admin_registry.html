@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Registro SECRETO</h2>
+  <table>
+    <thead><tr><th>ID</th><th>Fecha</th><th>Nombre</th><th>Matrícula</th><th>Seudónimo</th><th>Código</th></tr></thead>
+    <tbody>
+      {% for r in rows %}
+      <tr>
+        <td>{{ r['id'] }}</td>
+        <td>{{ r['fecha_registro'] }}</td>
+        <td>{{ r['nombre'] }}</td>
+        <td>{{ r['matricula'] }}</td>
+        <td>{{ r['seudonimo'] }}</td>
+        <td>{{ r['codigo'] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

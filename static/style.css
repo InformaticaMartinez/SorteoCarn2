@@ -1,0 +1,23 @@
+body { font-family: Arial, sans-serif; margin:0; background:#fff; color:#333; }
+.container { width:90%; max-width:1000px; margin:0 auto; padding:20px; }
+header { background:#000; color:#fff; padding:10px 0; }
+.header-container { display:flex; align-items:center; }
+.logo { height:60px; margin-right:15px; }
+h1,h2{ margin:0 0 10px 0; }
+.home-container { background:#fff; max-width:700px; margin:40px auto; padding:30px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); text-align:center; }
+.button-group { margin:20px 0; }
+.btn { display:inline-block; padding:10px 20px; border-radius:5px; text-decoration:none; margin:5px; font-weight:bold; }
+.btn-primary { background:#A52A2A; color:#fff; } .btn-primary:hover{background:#8B1E1E;}
+.btn-secondary { background:#333; color:#fff; } .btn-secondary:hover{background:#555;}
+.note { margin-top:15px; font-size:0.95em; color:#555; }
+form { background:#fff; max-width:600px; margin:40px auto; padding:30px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+form h2 { text-align:center; margin-bottom:20px; color:#A52A2A; }
+form label { display:block; margin:10px 0 5px; font-weight:bold; }
+form input[type="text"], form input[type="email"], form input[type="file"], form input[type="password"] { width:100%; padding:10px; border:1px solid #ccc; border-radius:5px; }
+form input[type="submit"] { background:#A52A2A; color:#fff; border:none; padding:12px 20px; font-size:1em; border-radius:5px; cursor:pointer; margin-top:15px; display:block; width:100%; }
+form input[type="submit"]:hover { background:#8B1E1E; }
+.alert { padding:15px; border-radius:5px; margin-bottom:20px; font-weight:bold; text-align:center; }
+.alert.success { background:#d4edda; color:#155724; border:1px solid #c3e6cb; }
+.alert.error { background:#f8d7da; color:#721c24; border:1px solid #f5c6cb; }
+table { width:100%; border-collapse:collapse; margin:20px 0; } table th, table td { padding:8px 10px; border:1px solid #eee; text-align:left; }
+footer { background:#f5f5f5; text-align:center; padding:10px; margin-top:40px; font-size:0.9em; color:#555; }

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+  <form method="POST" action="{{ url_for('inscripcion') }}">
+    {% if codigo %}
+      <div class="alert success">¡Inscripción exitosa! Tu código de participación es: <strong>{{ codigo }}</strong></div>
+      <div class="button-container"><a class="btn btn-primary" href="{{ url_for('index') }}">Volver al Inicio</a></div>
+    {% else %}
+      <h2>Inscripción</h2>
+      <label for="nombre">Nombre *</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <label for="matricula">Matrícula *</label>
+      <input type="text" id="matricula" name="matricula" required>
+      <label for="seudonimo">Seudónimo *</label>
+      <input type="text" id="seudonimo" name="seudonimo" required>
+      <input type="submit" value="Generar Código y Registrar">
+    {% endif %}
+  </form>
+{% endblock %}

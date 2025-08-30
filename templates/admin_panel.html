@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Panel Admin</h2>
+  <table>
+    <thead><tr><th>ID</th><th>Fecha</th><th>Matrícula</th><th>Seudónimo</th><th>Código</th><th>Files</th><th>Acciones</th></tr></thead>
+    <tbody>
+      {% for p in participants %}
+      <tr>
+        <td>{{ p['id'] }}</td>
+        <td>{{ p['fecha_registro'] }}</td>
+        <td>{{ p['matricula'] }}</td>
+        <td>{{ p['seudonimo'] }}</td>
+        <td>{{ p['codigo'] }}</td>
+        <td>{{ p['files'] }}</td>
+        <td><a href="{{ url_for('uploads_index', codigo=p['codigo']) }}">Ver archivos</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p><a href="{{ url_for('admin_registry') }}">Ver registro completo</a></p>
+{% endblock %}

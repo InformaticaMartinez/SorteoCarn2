@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+  <form method="POST" action="{{ url_for('presentacion') }}" enctype="multipart/form-data">
+    <h2>Subir Archivos</h2>
+    {% if mensaje %}
+      <div class="alert {{ 'success' if exito else 'error' }}">{{ mensaje }}</div>
+      <div class="button-container"><a class="btn btn-primary" href="{{ url_for('index') }}">Volver al Inicio</a></div>
+    {% endif %}
+    <label for="codigo">Código de Participación *</label>
+    <input type="text" id="codigo" name="codigo" required>
+    <label for="proyecto">Proyecto (PDF) *</label>
+    <input type="file" id="proyecto" name="proyecto" accept=".pdf" required>
+    <label for="declaracion">Declaración Jurada (PDF) *</label>
+    <input type="file" id="declaracion" name="declaracion" accept=".pdf" required>
+    <input type="submit" value="Subir Archivos">
+  </form>
+{% endblock %}

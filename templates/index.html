@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="home-container">
+    <h2>Bienvenido</h2>
+    <p>Participá inscribiéndote y subiendo tu propuesta de manera anónima.</p>
+    <div class="button-group">
+      <a href="{{ url_for('inscripcion') }}" class="btn btn-primary">Inscribirse</a>
+      <a href="{{ url_for('presentacion') }}" class="btn btn-secondary">Subir Archivos</a>
+    </div>
+    <p class="note">
+      Conservá el código que recibirás al inscribirte. Ese código es el único dato que identificará tu propuesta ante el jurado.
+    </p>
+  </div>
+{% endblock %}
